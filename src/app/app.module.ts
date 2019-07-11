@@ -3,10 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StartPageComponent } from './pages/start-page/start-page.component';
+import { QuestionPageComponent } from './pages/question-page/question-page.component';
+import { ResultPageComponent } from './pages/result-page/result-page.component';
+import { QuizPageComponent } from './pages/quiz-page/quiz-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StartPageComponent,
+    QuestionPageComponent,
+    ResultPageComponent,
+    QuizPageComponent
   ],
   imports: [
     BrowserModule,
