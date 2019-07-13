@@ -1,0 +1,22 @@
+.play {
+  color: red;
+}
+
+.answers {
+  display: flex;
+  flex-direction: row;
+
+  .answer {
+    flex: 1 0 0;
+    height: 100px;
+    border: 1px solid black;
+
+    &:hover {
+      opacity: 0.5;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}

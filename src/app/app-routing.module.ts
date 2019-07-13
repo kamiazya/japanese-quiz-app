@@ -15,12 +15,12 @@ const routes: Routes = [
     component: QuizPageComponent,
     children: [
       {
-        path: ':number',
-        component: QuestionPageComponent,
-      },
-      {
         path: 'result',
         component: ResultPageComponent,
+      },
+      {
+        path: ':number',
+        component: QuestionPageComponent,
       },
     ],
   },

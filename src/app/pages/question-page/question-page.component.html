@@ -1,1 +1,35 @@
-<p>question-page works!</p>
+<h1>
+  写真に写っているものは日本語でなんと読むでしょうか?
+  <span class="play" (click)="speak('写真に写っているものは日本語でなんと読むでしょうか')">▶</span>
+</h1>
+<div *ngIf="question$ | async as question">
+  <img [src]="question.imageUrl">
+  <p>
+    下のカードの中から選んでください
+    <span class="play" (click)="speak('下のカードの中から選んでください')">▶</span>
+  </p>
+
+  <div class="answers">
+    <div
+      class="answer"
+      *ngFor="let answer of question.answers"
+      (click)="clickCard(answer)"
+      (mouseenter)="speak(answer.yomi || answer.word)"
+    >
+      <div class="word">
+        {{answer.word}}
+      </div>
+    </div>
+  </div>
+
+  <div [ngSwitch]="result$ | async">
+    <div *ngSwitchCase="true">
+      正解！
+      <button (click)="goNext()">次へ</button>
+    </div>
+    <div *ngSwitchCase="false">
+      ハズレ
+      <button (click)="goNext()">次へ</button>
+    </div>
+  </div>
+</div>

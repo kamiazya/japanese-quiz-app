@@ -1,1 +1,28 @@
-<p>result-page works!</p>
+<h1>結果</h1>
+
+<h2>正答率</h2>
+{{correctAnswerCount}}/{{results.length}} ({{correctAnswerRate | percent}})
+
+<h2>問題と答え</h2>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>画像</th>
+      <th>回答</th>
+      <th>正解</th>
+      <th>結果</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let result of results">
+      <td>{{result.number}}</td>
+      <td><img [src]="result.imageURL"></td>
+      <td (click)="speak(result.userAnswerYomi || result.userAnswerWord)">{{result.userAnswerWord}}</td>
+      <td (click)="speak(result.quizAnserYomi || result.quizAnserWord)">{{result.quizAnserWord}}</td>
+      <td>{{result.result ? '正解': 'ハズレ'}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button routerLink="/">はじめに戻る</button>
