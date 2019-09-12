@@ -116,8 +116,15 @@
               "devServerTarget": "japanese-quiz-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://kamiazya.github.io/japanese-quiz-app/"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "japanese-quiz-app"
 }
