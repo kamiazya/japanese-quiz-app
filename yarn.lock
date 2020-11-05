@@ -188,10 +188,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/language-service@~8.2.9":
-  version "8.2.9"
-  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-8.2.9.tgz#b20c938bad93c046a22bbe44dd4fecd1ff039ff0"
-  integrity sha512-F6ReN0cToHIkCjEM2ECkBxCTsvFjVae8FpIr3Fz8IHZHOOYcS5mx/BWdEO7odI5/tQKl+cCWol7NjvJYV0zolg==
+"@angular/language-service@~10.2.2":
+  version "10.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-10.2.2.tgz#4611ade2c1e916cee8baf23158e71cf67807158c"
+  integrity sha512-j7EhGAiOfbfnCXrEqWkGThA1E4oN6eETKc6SP80Upvtp/K9OU4EtvcFIcALY4YBBg5Yjs5F3gtTlv0ZHK03AsA==
 
 "@angular/platform-browser-dynamic@~8.2.6":
   version "8.2.6"
